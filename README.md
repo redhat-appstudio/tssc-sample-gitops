@@ -8,7 +8,7 @@ This repository contains a set of gitops repository format components for use wi
 
 To configured your `tad` cli to use this template repo use 
 
-`tad set-repo https://github.com/jduimovich/dance-standard-gitops`
+`tad set-repo https://github.com/redhat-appstudio/tssc-sample-gitops`
 
 Ensure its installed 
 
