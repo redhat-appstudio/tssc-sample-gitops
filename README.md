@@ -36,15 +36,15 @@ tad describe
 The c1 component will be running 
 
 ### http 
-    - contains a deployment, service and route for an image listening on port 8080
+    - contains a deployment, service and route for an image listening on port {{values.port}} 
     - this matches the current RHTAP default deployment
     
 ### service 
-    - contains a deployment, service listening on port 8080
+    - contains a deployment, service listening on port {{values.port}} 
     - this is a template which is similar to the http one, however does not expose a route, so an internal service only. 
 
 ### http-ab 
-    - contains a deployment, service and route listening on port 8080
+    - contains a deployment, service and route listening on port {{values.port}} 
     - the route  supports A/B load splitting between two components 
     ```  
         tad set c1 service-a  80
