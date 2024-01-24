@@ -11,8 +11,7 @@ metadata:
     app.kubernetes.io/managed-by: kustomize
     app.kubernetes.io/name:  {{values.name}}
     app.kubernetes.io/part-of: {{values.appName}}  
-  name: {{values.name}}-a 
-  namespace: {{values.namespace}}
+  name: {{values.name}}-a
 spec:
   replicas: 1
   selector:

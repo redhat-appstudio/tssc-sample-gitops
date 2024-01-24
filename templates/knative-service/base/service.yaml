@@ -4,7 +4,6 @@ metadata:
   annotations:  
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
   name: {{values.name}} 
-  namespace: {{values.namespace}} 
 spec:
   template:
     spec:
