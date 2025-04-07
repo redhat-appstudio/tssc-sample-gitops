@@ -46,6 +46,9 @@ spec:
           requests:
             cpu: 10m
             memory: 50Mi    
+        envFrom:
+        - configMapRef:
+            name: {{values.name}}-model-config
         env:
         - name: GIT_REPO
           value: {{values.repoURL}}
