@@ -52,5 +52,12 @@ spec:
         env:
         - name: GIT_REPO
           value: {{values.repoURL}}
+        {%- if values.includeModelEndpointSecret %}
+        - name: MODEL_ENDPOINT_BEARER
+          valueFrom:
+            secretKeyRef:
+              name: {{ values.modelEndpointSecretName }}
+              key: {{ values.modelEndpointSecretKey }}
+        {%- endif %}
       imagePullSecrets:
         - name: rhtap-image-registry-auth
